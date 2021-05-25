@@ -1,0 +1,182 @@
+:root {
+  --primary: #013343;
+  --primary-dark: #012936;
+}
+
+body,
+html {
+  margin: 0 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.mainContainer {
+  z-index: 1;
+  display: flex;
+  justify-content: stretch;
+
+  background-color: white;
+}
+.bannerContainer {
+  flex: 1.5;
+
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.5rem 0rem 0rem 0rem;
+}
+.bannerContainer h1 {
+  margin: 1rem 0 0 0;
+  color: white;
+}
+.bannerContainer h3 {
+  color: #86bed3;
+  margin: 0.5rem;
+}
+
+#createButton {
+  cursor: pointer;
+  width: 100%;
+  align-self: center;
+  border: 0px;
+  height: 48px;
+  background-color: var(--primary);
+  border-radius: 4px;
+  font-size: 1rem;
+  color: white;
+  font-weight: 600;
+  margin: 0.5rem;
+}
+#createButton:hover {
+  filter: brightness(0.95);
+  outline: none;
+}
+
+.checkboxContainer {
+  margin: 1rem 0rem;
+  display: flex;
+  width: 80%;
+  font-size: 1rem;
+}
+
+.checkboxContainer label {
+  font-weight: 400;
+  padding-left: 0.25rem;
+}
+
+.checkboxContainer a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.loginContainer {
+  flex: 1;
+  margin: 0rem 1rem;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.loginContainer h1 {
+  margin: 0rem 0rem 0.5rem 0rem;
+}
+
+.loginInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.loginInput label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+}
+
+.loginInput input {
+  padding-left: 0.5rem;
+  height: 42px;
+  border-radius: 4px;
+  border: 1px solid grey;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.loginInput input:focus {
+  outline-style: none;
+}
+
+@media (min-width: 1081px) {
+  .mainContainer {
+    border-radius: 6px;
+  }
+  .bannerContainer {
+    border-radius: 6px 0px 0px 6px;
+  }
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+  .mainContainer {
+    z-index: 1;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    flex-direction: column;
+  }
+  .bannerContainer {
+    flex-direction: column;
+    flex: 1;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 93.75%;
+  }
+  .mainContainer {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .bannerContainer {
+    color: white;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+  }
+
+  .bannerContainer img {
+    height: 50%;
+  }
+
+  .loginContainer {
+    flex: 1;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
